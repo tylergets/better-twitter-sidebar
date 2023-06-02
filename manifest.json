@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Twitter Element Remover",
+  "version": "1.0",
+  "description": "Removes an element from Twitter.com",
+  "permissions": ["https://twitter.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
