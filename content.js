@@ -1,31 +1,26 @@
 let timer;
 
+const twitterBlueSelector = "a[href='/i/twitter_blue_sign_up']";
+const profileSelector = 'a[aria-label="Profile"]';
 
-function removeElement(selector) {
-  var element = document.querySelector(selector);
-  console.log({
-    element
-  })
-  if (element) {
-    element.remove();
-    clearInterval(timer)
-    setupNav()
-  }
-}
-
-
-// Call the removeElement function with the CSS selector of the element you want to remove
 timer = setInterval(() => {
   console.log('BetterTwitter loading check tick')
 
-  removeElement("a[href='/i/twitter_blue_sign_up']");
+  var twitterBlueElement = document.querySelector(twitterBlueSelector);
+  if(twitterBlueElement) {
+    clearInterval(timer)
+
+    twitterBlueElement.remove();
+    
+    setupNav()
+  }
+
+  removeElement();
 }, 10)
 
+
 function setupNav() {
-  const element = document.querySelector('a[aria-label="Profile"]')
-  console.log({
-    element
-  })
+  const element = document.querySelector(profileSelector)
   
   if(element) {
     const muteWordsBtn = element.cloneNode(true)

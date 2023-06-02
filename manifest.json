@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Twitter Element Remover",
+  "name": "Better Twitter Sidebar",
   "version": "1.0",
   "description": "Removes an element from Twitter.com",
   "permissions": ["https://twitter.com/*"],
